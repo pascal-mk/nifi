@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1780058350803,
+    "description" : "Send by SFTP",
+    "identifier" : "EmissionToAirconnect",
+    "lastModifiedTimestamp" : 1780058350803,
+    "name" : "EmissionToAirconnect",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
