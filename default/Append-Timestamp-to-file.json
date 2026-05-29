@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1780042761148,
+    "description" : "Flow that append a timestamp to o flowfilename",
+    "identifier" : "Append-Timestamp-to-file",
+    "lastModifiedTimestamp" : 1780042761148,
+    "name" : "Append Timestamp to file",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
