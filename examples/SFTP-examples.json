@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1780044885788,
+    "description" : "",
+    "identifier" : "SFTP-examples",
+    "lastModifiedTimestamp" : 1780044885788,
+    "name" : "SFTP examples",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
