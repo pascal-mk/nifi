@@ -175,6 +175,7 @@
         "Log Level" : "info",
         "Output Format" : "Line per Attribute",
         "Log Payload" : "false",
+        "Log Prefix" : "Test deuxieme composant importé",
         "Character Set" : "UTF-8",
         "Attributes to Log Regular Expression" : ".*"
       },
@@ -344,6 +345,6 @@
   "snapshotMetadata" : {
     "author" : "7ebcb932-3d04-4a7c-84d6-35bdd6e3f388",
     "flowIdentifier" : "Append-Timestamp-to-Flowfile-name",
-    "timestamp" : 1780042982102
+    "timestamp" : 1780043092082
   }
 }
