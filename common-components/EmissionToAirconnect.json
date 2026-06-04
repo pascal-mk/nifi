@@ -49,36 +49,6 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "14204510-eeb4-3f0c-8184-e29eeff8dce7",
-        "name" : "RouteOnAttribute",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "201ba7cc-653c-3d04-b230-45d3300790bf",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "73b9cc38-019e-1000-5230-2cb72f7e2d59",
-        "name" : "GetFile",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 8
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
         "id" : "73b9cc3d-019e-1000-67de-d573bff71b49",
         "name" : "LogAttribute",
         "type" : "PROCESSOR"
@@ -259,6 +229,66 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
+        "id" : "3a6a56fe-9b0d-3909-bd3e-41a6fd9905d0",
+        "name" : "UpdateAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "c1fdf7d3-6ac6-3bda-b637-e453763370f1",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "73b9cc38-019e-1000-5230-2cb72f7e2d59",
+        "name" : "GetFile",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 11
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "14204510-eeb4-3f0c-8184-e29eeff8dce7",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "d576a561-4e3a-39f6-a309-7c8956a8d415",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "3a6a56fe-9b0d-3909-bd3e-41a6fd9905d0",
+        "name" : "UpdateAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 12
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
         "id" : "73b9cc3c-019e-1000-109c-0761ffcb170d",
         "name" : "PutSFTP",
         "type" : "PROCESSOR"
@@ -297,7 +327,7 @@
     "maxConcurrentTasks" : 1,
     "name" : "Emission SFTP",
     "outputPorts" : [ ],
-    "parameterContextName" : "AirConnectBouyEmissionPO",
+    "parameterContextName" : "BouyEmissionPO",
     "position" : {
       "x" : 0.0,
       "y" : 0.0
@@ -353,6 +383,79 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-update-attribute-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.8.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "3a6a56fe-9b0d-3909-bd3e-41a6fd9905d0",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "UpdateAttribute",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -3328.0,
+        "y" : -2560.0
+      },
+      "properties" : {
+        "Store State" : "Do not store state",
+        "Cache Value Lookup Cache Size" : "100",
+        "step.name" : "Detection des fichiers"
+      },
+      "propertyDescriptors" : {
+        "Delete Attributes Expression" : {
+          "displayName" : "Delete Attributes Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Delete Attributes Expression",
+          "sensitive" : false
+        },
+        "Store State" : {
+          "displayName" : "Store State",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Store State",
+          "sensitive" : false
+        },
+        "Cache Value Lookup Cache Size" : {
+          "displayName" : "Cache Value Lookup Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Cache Value Lookup Cache Size",
+          "sensitive" : false
+        },
+        "step.name" : {
+          "displayName" : "step.name",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "step.name",
+          "sensitive" : false
+        },
+        "Stateful Variables Initial Value" : {
+          "displayName" : "Stateful Variables Initial Value",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Stateful Variables Initial Value",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
       "yieldDuration" : "1 sec"
     }, {
       "autoTerminatedRelationships" : [ ],
@@ -579,8 +682,8 @@
       "name" : "GetFile",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -3336.0,
-        "y" : -2568.0
+        "x" : -3328.0,
+        "y" : -2800.0
       },
       "properties" : {
         "Keep Source File" : "false",
@@ -1314,35 +1417,23 @@
   "flowEncodingVersion" : "1.0",
   "latest" : false,
   "parameterContexts" : {
-    "SFTP Airconnect" : {
-      "componentType" : "PARAMETER_CONTEXT",
-      "description" : "",
-      "inheritedParameterContexts" : [ ],
-      "name" : "SFTP Airconnect",
-      "parameters" : [ {
-        "description" : "",
-        "name" : "password",
-        "provided" : false,
-        "sensitive" : true
-      }, {
-        "description" : "",
-        "name" : "username",
-        "provided" : false,
-        "sensitive" : false,
-        "value" : "testuser"
-      } ]
-    },
-    "AirConnectBouyEmissionPO" : {
+    "BouyEmissionPO" : {
       "componentType" : "PARAMETER_CONTEXT",
       "description" : "",
       "inheritedParameterContexts" : [ "SFTP Airconnect" ],
-      "name" : "AirConnectBouyEmissionPO",
+      "name" : "BouyEmissionPO",
       "parameters" : [ {
         "description" : "",
         "name" : "archive_path",
         "provided" : false,
         "sensitive" : false,
         "value" : ".\\data-out\\archive"
+      }, {
+        "description" : "",
+        "name" : "convert_utf8",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "true"
       }, {
         "description" : "",
         "name" : "file_filter",
@@ -1362,12 +1453,30 @@
         "sensitive" : false,
         "value" : "preprod-bouy-mcc"
       } ]
+    },
+    "SFTP Airconnect" : {
+      "componentType" : "PARAMETER_CONTEXT",
+      "description" : "",
+      "inheritedParameterContexts" : [ ],
+      "name" : "SFTP Airconnect",
+      "parameters" : [ {
+        "description" : "",
+        "name" : "password",
+        "provided" : false,
+        "sensitive" : true
+      }, {
+        "description" : "",
+        "name" : "username",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "testuser"
+      } ]
     }
   },
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "author" : "7ebcb932-3d04-4a7c-84d6-35bdd6e3f388",
     "flowIdentifier" : "EmissionToAirconnect",
-    "timestamp" : 1780059934257
+    "timestamp" : 1780577783654
   }
 }
