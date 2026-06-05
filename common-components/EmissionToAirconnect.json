@@ -1321,7 +1321,7 @@
       },
       "properties" : {
         "Log FlowFile Properties" : "true",
-        "Log Level" : "error",
+        "Log Level" : "warn",
         "Output Format" : "Line per Attribute",
         "Log Payload" : "false",
         "Log Prefix" : "Erreur envoie Fichier par SFTP",
@@ -1477,6 +1477,6 @@
   "snapshotMetadata" : {
     "author" : "7ebcb932-3d04-4a7c-84d6-35bdd6e3f388",
     "flowIdentifier" : "EmissionToAirconnect",
-    "timestamp" : 1780577783654
+    "timestamp" : 1780649545009
   }
 }
