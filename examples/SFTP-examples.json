@@ -230,6 +230,7 @@
       "maxConcurrentTasks" : 1,
       "name" : "SFTP GetFile usecase",
       "outputPorts" : [ ],
+      "parameterContextName" : "SFTP Airconnect",
       "position" : {
         "x" : -744.0,
         "y" : -392.0
@@ -810,6 +811,7 @@
           "Search Recursively" : "false",
           "Entity Tracking Time Window" : "3 hours",
           "Strict Host Key Checking" : "false",
+          "Password" : "#{password}",
           "File Filter Regex" : "sftp_test\\.txt",
           "Hostname" : "localhost",
           "Remote Path" : "./upload",
@@ -817,7 +819,7 @@
           "Send Keep Alive On Timeout" : "true",
           "Data Timeout" : "30 sec",
           "Target System Timestamp Precision" : "auto-detect",
-          "Username" : "testuser",
+          "Username" : "#{username}",
           "Algorithm Negotiation" : "DEFAULT",
           "Listing Strategy" : "timestamps"
         },
@@ -1114,7 +1116,8 @@
           "Data Timeout" : "30 sec",
           "Username" : "testuser",
           "Algorithm Negotiation" : "DEFAULT",
-          "Strict Host Key Checking" : "false"
+          "Strict Host Key Checking" : "false",
+          "Password" : "#{password}"
         },
         "propertyDescriptors" : {
           "Port" : {
@@ -3434,11 +3437,30 @@
   },
   "flowEncodingVersion" : "1.0",
   "latest" : false,
-  "parameterContexts" : { },
+  "parameterContexts" : {
+    "SFTP Airconnect" : {
+      "componentType" : "PARAMETER_CONTEXT",
+      "description" : "",
+      "inheritedParameterContexts" : [ ],
+      "name" : "SFTP Airconnect",
+      "parameters" : [ {
+        "description" : "",
+        "name" : "password",
+        "provided" : false,
+        "sensitive" : true
+      }, {
+        "description" : "",
+        "name" : "username",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "testuser"
+      } ]
+    }
+  },
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "author" : "7ebcb932-3d04-4a7c-84d6-35bdd6e3f388",
     "flowIdentifier" : "SFTP-examples",
-    "timestamp" : 1780044887069
+    "timestamp" : 1780664434197
   }
 }
