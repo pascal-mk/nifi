@@ -245,7 +245,151 @@
         },
         "zIndex" : 6
       } ],
-      "controllerServices" : [ ],
+      "controllerServices" : [ {
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-oauth2-provider-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.8.0"
+        },
+        "comments" : "",
+        "componentType" : "CONTROLLER_SERVICE",
+        "controllerServiceApis" : [ {
+          "bundle" : {
+            "artifact" : "nifi-standard-services-api-nar",
+            "group" : "org.apache.nifi",
+            "version" : "2.8.0"
+          },
+          "type" : "org.apache.nifi.oauth2.OAuth2AccessTokenProvider"
+        } ],
+        "groupIdentifier" : "5989800a-fec3-3069-9983-79ee26f88620",
+        "identifier" : "376b35b7-3aa8-30e4-af96-20efb2537484",
+        "name" : "JWTBearerOAuth2AccessTokenProvider",
+        "properties" : {
+          "Set JWT Header X.509 Cert Thumbprint" : "false",
+          "Assertion Parameter Name" : "assertion",
+          "Grant Type" : "urn:ietf:params:oauth:grant-type:jwt-bearer",
+          "Refresh Window" : "5 minutes",
+          "Signing Algorithm" : "PS256",
+          "JWT Expiration Time" : "1 hour"
+        },
+        "propertyDescriptors" : {
+          "Set JWT Header X.509 Cert Thumbprint" : {
+            "displayName" : "Set JWT Header X.509 Cert Thumbprint",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Set JWT Header X.509 Cert Thumbprint",
+            "sensitive" : false
+          },
+          "Assertion Parameter Name" : {
+            "displayName" : "Assertion Parameter Name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Assertion Parameter Name",
+            "sensitive" : false
+          },
+          "JWT ID" : {
+            "displayName" : "JWT ID",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "JWT ID",
+            "sensitive" : false
+          },
+          "Issuer" : {
+            "displayName" : "Issuer",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Issuer",
+            "sensitive" : false
+          },
+          "Audience" : {
+            "displayName" : "Audience",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Audience",
+            "sensitive" : false
+          },
+          "Grant Type" : {
+            "displayName" : "Grant Type",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Grant Type",
+            "sensitive" : false
+          },
+          "Private Key Service" : {
+            "displayName" : "Private Key Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Private Key Service",
+            "sensitive" : false
+          },
+          "Subject" : {
+            "displayName" : "Subject",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Subject",
+            "sensitive" : false
+          },
+          "Token Endpoint URL" : {
+            "displayName" : "Token Endpoint URL",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Token Endpoint URL",
+            "sensitive" : false
+          },
+          "Refresh Window" : {
+            "displayName" : "Refresh Window",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Refresh Window",
+            "sensitive" : false
+          },
+          "SSL Context Service" : {
+            "displayName" : "SSL Context Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "SSL Context Service",
+            "sensitive" : false
+          },
+          "Scope" : {
+            "displayName" : "Scope",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Scope",
+            "sensitive" : false
+          },
+          "Web Client Service" : {
+            "displayName" : "Web Client Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Web Client Service",
+            "sensitive" : false
+          },
+          "Signing Algorithm" : {
+            "displayName" : "Signing Algorithm",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Signing Algorithm",
+            "sensitive" : false
+          },
+          "JWT Expiration Time" : {
+            "displayName" : "JWT Expiration Time",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "JWT Expiration Time",
+            "sensitive" : false
+          },
+          "Key ID" : {
+            "displayName" : "Key ID",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Key ID",
+            "sensitive" : false
+          }
+        },
+        "scheduledState" : "DISABLED",
+        "type" : "org.apache.nifi.oauth2.JWTBearerOAuth2AccessTokenProvider"
+      } ],
       "defaultBackPressureDataSizeThreshold" : "1 GB",
       "defaultBackPressureObjectThreshold" : 10000,
       "defaultFlowFileExpiration" : "0 sec",
@@ -1408,8 +1552,8 @@
       "name" : "API Server",
       "outputPorts" : [ ],
       "position" : {
-        "x" : -248.0,
-        "y" : -128.0
+        "x" : -240.0,
+        "y" : -136.0
       },
       "processGroups" : [ ],
       "processors" : [ {
@@ -2021,6 +2165,6 @@
   "snapshotMetadata" : {
     "author" : "7ebcb932-3d04-4a7c-84d6-35bdd6e3f388",
     "flowIdentifier" : "API-call-and-sever",
-    "timestamp" : 1780044758351
+    "timestamp" : 1780664443153
   }
 }
